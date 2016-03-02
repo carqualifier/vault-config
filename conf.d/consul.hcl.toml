@@ -1,0 +1,13 @@
+[template]
+src = "consul.hcl.tmpl"
+dest = "/config/consul.hcl"
+owner = "root"
+mode = "0644"
+keys = [
+  "/self/service/containers",
+  "/containers",
+  "self/container/name",
+  "/self/container/primary_ip",
+  "/services/consul/metadata/enc.key",
+  "/self/container/service_index",
+]
