@@ -5,6 +5,7 @@ backend "consul" {
 
 listener "tcp" {
  address = "{{getv "/self/container/primary_ip"}}:8200"
+ advertise_addr = "{{getv "/self/container/primary_ip"}}:8200"
  tls_disable = 1
 }
 
